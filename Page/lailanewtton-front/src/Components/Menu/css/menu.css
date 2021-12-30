@@ -1,0 +1,28 @@
+#menu-container {
+    position: fixed;
+    background-color: #1D2853;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-list-item-container {
+    display: grid;
+    grid-gap: 30px;
+    text-align: center;
+    font-size: 30px;
+   
+}
+
+#menu-list-item-container li a{
+    text-decoration: none;
+    color: #A17D18;
+    text-shadow: 1px 1px white;
+}
+#menu-list-item-container li a:visited{
+    color: #A17D18;
+    text-shadow: 1px 1px white;
+}

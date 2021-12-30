@@ -1,0 +1,14 @@
+body {
+    background: rgb(29,40,83);
+    background: linear-gradient(to right, rgba(29,40,83,1) 42%, rgba(71,79,110,1) 100%);
+}
+
+
+.header-section {
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--main-bg-color);
+}
+
