@@ -10,5 +10,18 @@ body {
     font-size: 30px;
     text-align: center;
     color: var(--main-bg-color);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
+.carrousel-container {
+    margin-bottom: 20px;
+}
+
+.text-content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+}

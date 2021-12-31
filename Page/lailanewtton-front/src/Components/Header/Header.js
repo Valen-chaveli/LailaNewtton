@@ -24,7 +24,7 @@ export const Header = () => {
             </div>
             <h1>Laila Newtton</h1>
         </header>
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
             {menuOpen && <Menu />} 
         </AnimatePresence>
         </>
