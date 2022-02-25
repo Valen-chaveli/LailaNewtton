@@ -10,8 +10,7 @@ body {
     font-size: 30px;
     text-align: center;
     color: var(--main-bg-color);
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 15px 0px 15px 0px;
 }
 
 .carrousel-container {
@@ -25,3 +24,38 @@ body {
     line-height: 1.6;
     color: white;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px blue; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+@media (min-width : 768px) {
+    .header-section {
+        grid-area: header;
+    }
+
+    .slider-content {
+        grid-area: slider;
+    }
+
+    .text-content {
+        grid-area: content;
+    }
+}
+

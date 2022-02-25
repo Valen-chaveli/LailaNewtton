@@ -1,0 +1,151 @@
+.contact-content {
+    background-color: white;
+    padding: 15px;
+}
+
+.contact-content-image {
+    display: none;
+}
+
+.contact-content-image img {
+    width: 100%;
+}
+
+
+.contact-content-form h2{
+    font-size: 22px;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    left: 0;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color:#5fa8d3;
+}
+
+.form input:focus + .label-name::after, 
+.form input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+
+.content-message {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    resize: vertical;
+
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button {
+    cursor: pointer;
+}
+
+.submit-button-container input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color:white;
+    letter-spacing: 1px;
+}
+
+.email-format-invalid-error {
+    border-radius: 2px;
+    background-color: #ffcdd2;
+    padding: 12px;
+    border-left: 3px solid #ef5350;
+    color: #c71c1c;
+}
+
+.modal button, .modal button:active, .modal button:hover, .modal button:focus {
+    background-color: var(--secondary-color);
+}
+
+.form-container-message > textarea{
+    padding: 7px;
+}
+
+@media (min-width : 768px) {
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .contact-content-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-content-image img{
+        width: 400px;
+        height: 550px;
+    }
+}
+
+
+

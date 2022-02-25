@@ -1,0 +1,9 @@
+@media (min-width : 768px) {
+    #book-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "slider content content";
+    }
+}

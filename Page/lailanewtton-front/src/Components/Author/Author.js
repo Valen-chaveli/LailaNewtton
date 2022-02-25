@@ -1,15 +1,15 @@
 import React from 'react'
 import { Slider } from '../Slider/Slider'
 import { SliderBookData } from '../Slider/SliderBookData'
+import "./css/author.css";
 
 export const Author = () => {
     return (
-        <section id="author-section">
+        <section id="author-section" className='section'>
             <div className='header-section'>
                 <h2>Sobre la autora</h2>
             </div>
-            <Slider sliders={SliderBookData} />
-
+ 
             <div className='auhtor-text-content text-content'>
             Detrás del pseudónimo de Laila Newtton se encuentra Sandra Bou. <br></br><br></br>
             Nacida el verano del 2003 en Valencia, empezó a escribir a los once años guiones para 
@@ -24,6 +24,9 @@ export const Author = () => {
             y en el amor de su perrita Laila. A raíz de su pérdida decidió dedicarle su pseudónimo.
             </div>
 
+            <div className='slider-container'>
+                <Slider className="slider-content" sliders={SliderBookData} />
+            </div>
         </section>
     )
 }

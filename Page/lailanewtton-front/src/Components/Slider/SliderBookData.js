@@ -16,8 +16,7 @@ export const SliderBookData = [
     },
     {
         image: BookImage3
-    }
-    
+    },    
 ]
 
 export const SliderAuthorData = [

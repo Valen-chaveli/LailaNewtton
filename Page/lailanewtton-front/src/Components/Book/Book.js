@@ -4,11 +4,13 @@ import './css/book.css';
 
 export const Book = () => {
     return(
-        <section id="book-section">
+        <section id="book-section" className='section'>
             <div className='header-section'>
                 <h2>El club de los ojos claros</h2>
             </div>
-            <Slider sliders={ SliderBookData } />
+            <div className='slider-container'>
+                <Slider className="slider-content" sliders={ SliderBookData } />
+            </div>
             <div className='book-text-content text-content'>
             Emma ya no siente, desde hace dos meses.
             <br></br><br></br>

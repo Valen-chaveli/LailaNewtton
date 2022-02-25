@@ -1,12 +1,15 @@
 #main-section {
-    padding: 15px;
     position: relative;
 }
+#lailanewtton-main-author {
+    display: none;
+}
 
-#main-section > img#quotes {
+#main-section #text-section > #quotes {
     position: absolute;
     width: 100px;
-    left: 20px;
+    top: -40px;
+    z-index: -10;
 }
 
 #photo-section {
@@ -40,3 +43,35 @@
     text-align: justify;
 }
 
+@media (min-width : 768px) {
+    #main-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #lailanewtton-main-author {
+        display: block;
+        font-size: 80px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 0px white;
+        color: var(--secondary-color);
+        margin: 20px 0px 20px 0px;
+    }
+
+    #main-section #text-section > #quotes {
+        position: absolute;
+        width: 170px;
+        top: 175px;
+        z-index: -10;
+    }
+
+    #text-section {   
+        margin-top: 0px;
+    }
+
+    #text-section blockquote {
+        margin-top: 100px;
+        padding: 20px;
+    }
+}
