@@ -20,7 +20,7 @@ const particlesConfig = {
           width: 0,
           color: "#000000"
         },
-        polygon: {
+       polygon: {
           nb_sides: 5
         },
         image: {

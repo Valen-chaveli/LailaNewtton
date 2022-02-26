@@ -47,16 +47,20 @@ export const Contact = () => {
         e.preventDefault();
 
         const { value : email } = e.target.email;
-
+        
         const emailCorrect = checkEmailIsValid(email);
 
         if(!emailCorrect) setEmailCorrect(false);
         else {
             setEmailCorrect(true);
 
-            fetch("http://192.168.1.136:4000/sendEmail", {
+            console.log(user);
+
+            //TODO: Cambiar por la ip correspondiente
+            fetch("http://localhost:4000/sendEmail", {
                 method: "POST",
-                body : JSON.stringify(user) 
+                body : JSON.stringify(user), 
+                headers: { "Content-Type": "application/json" }
             }).then((res) => {
                 if(res.ok) successModal();
                 else errorModal();
@@ -71,13 +75,14 @@ export const Contact = () => {
     const checkEmailIsValid = (email) => {
         const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+        
         if(!emailRegEx.test(email)) {
             return false;
         } 
 
         return true;
     }
-
+    
     return (
         <section id="contact-section">
         <div className='header-section'>
@@ -87,6 +92,7 @@ export const Contact = () => {
             <div className="contact-content-image">
                 <img src={BookFrontPage} alt="image"/>
             </div>
+        
             <div className="contact-content-form">
                 <div>
                     <h2>Contacta con la autora</h2>

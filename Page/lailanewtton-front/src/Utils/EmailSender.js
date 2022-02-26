@@ -9,8 +9,7 @@ app.register(cors, {
     methods: ["POST"]
 });
 
-function boostrap() {
-    app.post("/sendEmail", async (request, reply) => {
+app.post("/sendEmail", async (request, reply) => {
         const user = JSON.parse(request.body);
      
         console.log(user);
@@ -24,14 +23,13 @@ function boostrap() {
 
         return reply.send(info)
     
-    });
+});
     
-    app.listen(4000, (err, address) => {
-        if(err) console.log(err);
-        console.log("Server listening on address", address);
-    });
-}
+app.listen(4000, (err, address) => {
+    if(err) console.log(err);
+    console.log("Server listening on address", address);
+});
 
-boostrap();
+
 
 
